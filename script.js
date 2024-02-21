@@ -1,5 +1,5 @@
 // Fetch the CSV data
-fetch('data.csv')
+fetch('https://drive.google.com/file/d/1Pw6k5Svy1S8j0zb45dV-mayIp3NSlmze/view?usp=sharing')
     .then(response => response.text())
     .then(csvString => {
         // Convert CSV string to arrays
