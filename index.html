@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calc Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel Player Count</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="concepts.html">Concepts</a>
+            <a href="analysis.html">Analysis</a>
+        </div>
+        <h1>Hypixel Player Count</h1>
+    </header>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

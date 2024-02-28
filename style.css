@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #00ff00; /* Classic green on black */
+}
+
+header {
+    background-color: #222222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.navbar a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.chart-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: #222222;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    border-radius: 5px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
