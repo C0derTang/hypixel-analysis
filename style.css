@@ -1,51 +1,106 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: #00ff00; /* Classic green on black */
-}
-
-header {
-    background-color: #222222;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.navbar {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    height: 100vh; /* Full viewport height */
     display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+    flex-direction: column; /* Stack elements vertically */
+    background-image: url('dynamic-background.jpg'); /* Assuming a purple-themed background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.navbar a {
-    color: #00ff00;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Use 100% of the viewport height */
+    align-items: center;
+    justify-content: space-around; /* Distribute space around items */
+    text-align: center;
+    padding: 20px; /* Add some padding */
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust as per your logo's aspect ratio */
+    height: auto;
+}
+
+.main-nav a {
+    color: #a020f0; /* Brighter purple for links */
     text-decoration: none;
     margin: 0 15px;
+    font-size: 1.2rem; /* Larger font size for navigation */
     font-weight: bold;
 }
 
-.navbar a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2em;
+.content {
+    flex-grow: 1; /* Allow content to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 4rem; /* Larger font size for the title */
+    color: #a020f0; /* Brighter purple color */
+    margin: 20px 0; /* Add some vertical spacing */
+}
+
+.description {
+    font-size: 1.5rem; /* Larger font size for the description */
+    color: #da70d6; /* Lighter purple color */
+    margin: 20px 0; /* Add some vertical spacing */
 }
 
 .chart-container {
-    margin: 20px auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    background-color: #222222;
-    border: 1px solid #00ff00;
-    box-shadow: 0 0 10px #00ff00;
-    border-radius: 5px;
+    width: 90%; /* Use a percentage of the viewport width */
+    max-width: 1000px; /* Maximum width of the chart container */
+    margin: 0 auto; /* Center the chart container */
 }
 
 canvas {
     width: 100% !important;
     height: auto !important;
+    max-height: 500px; /* Maximum height of the canvas */
+}
+
+.action-btn {
+    background-color: #a020f0; /* Brighter purple color */
+    color: #000;
+    border: none;
+    padding: 15px 30px; /* Larger padding for a larger button */
+    font-size: 1.2rem; /* Larger font size for button text */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px; /* Add some margin to the top of the button */
+}
+
+.action-btn:hover {
+    background-color: #9932cc; /* Darker purple on hover */
+}
+
+.main-footer {
+    padding: 15px;
+    font-size: 1rem; /* Larger font size for footer text */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-footer p {
+    margin: 0;
 }

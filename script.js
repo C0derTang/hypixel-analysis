@@ -21,12 +21,12 @@ fetch('data.csv')
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'My Dataset',
+                    label: 'Player Count',
                     data: data,
                     backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                    borderColor: '#00ff00',
+                    borderColor: '#a020f0',
                     borderWidth:2,
-                    pointBackgroundColor: '#00ff00',
+                    pointBackgroundColor: '#a020f0',
                     pointBorderColor: '#ffffff',
                     pointRadius: 0,
                     pointHoverRadius: 5,
@@ -35,37 +35,27 @@ fetch('data.csv')
             },
             options: {
                 scales: {
-                    x:{
+                    x: {
                         grid: {
-                            color: '#004400',
+                            color: '#6a0dad', // A brighter purple for grid lines
                         },
-                        ticks:{
-                            color: '#00ff00',
+                        ticks: {
+                            color: '#a020f0', // A vivid purple for tick labels
                         }
                     },
-                    y:{
+                    y: {
                         grid: {
-                            color: '#004400',
+                            color: '#6a0dad', // A brighter purple for grid lines
                         },
-                        ticks:{
-                            color: '#00ff00',
+                        ticks: {
+                            color: '#a020f0', // A vivid purple for tick labels
                         }
-                    },
-                    xAxes: [{
-                        type: 'time',
-                        time: {
-                            unit: 'day',
-                            tooltipFormat: 'MM/DD/YYYY',
-                            displayFormats: {
-                                'day': 'MM/DD/YYYY'
-                            }
-                        }
-                    }]
+                    }
                 },
                 plugins: {
                     legend: {
                         labels: {
-                            color: '#00ff00',
+                            color: '#a020f0', // A vivid purple for legend labels
                         }
                     },
                     zoom: {
@@ -74,13 +64,13 @@ fetch('data.csv')
                                 enabled: true, // Enable zooming with the mouse wheel
                             },
                             pinch: {
-                                enabled: true // Enable zooming with pinch gestures on touch devices
+                                enabled: true, // Enable zooming with pinch gestures on touch devices
                             },
-                            mode: 'x' // Enable zooming on both axes
+                            mode: 'x' // Enable zooming on the x-axis
                         },
                         pan: {
                             enabled: true, // Enable panning
-                            mode: 'x' // Enable panning on both axes
+                            mode: 'x' // Enable panning on the x-axis
                         }
                     }
                 },
