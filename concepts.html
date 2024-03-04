@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concepts - Hypixel Player Count</title>
+    <title>Hypixel Player Count</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
 </head>
 <body>
     <div class="main-container">
@@ -12,32 +17,23 @@
             <!-- Assuming you have a Hypixel logo image -->
             <img src="hypixel-logo.png" alt="Hypixel Logo" class="logo"> 
             <nav class="main-nav">
-                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
                 <a href="concepts.html">Concepts</a>
                 <a href="analysis.html">Analysis</a>
             </nav>
         </header>
         <div class="content">
-            <!-- Concepts boxes -->
-            <div class="neon-box">
-                <p>Concept 1</p>
+            <h1 class="title">Hypixel Player Count</h1>
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
             </div>
-            <div class="neon-box">
-                <p>Concept 2</p>
-            </div>
-            <div class="neon-box">
-                <p>Concept 3</p>
-            </div>
-            <div class="neon-box">
-                <p>Concept 4</p>
-            </div>
-            <div class="neon-box">
-                <p>Concept 5</p>
-            </div>
+            <p class="description">Calculus-based analysis of the player count and statistics of the Hypixel server.</p>
+            <button class="action-btn">Massive Shitstorm Incoming</button>
         </div>
+        <footer class="main-footer">
+            <p>created by Christopher Tang, Ishmeet Singh, and Ryan Gurevich</p>
+        </footer>
     </div>
-    <footer class="main-footer">
-        <p>created by Christopher Tang, Ishmeet Singh, and Ryan Gurevich</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

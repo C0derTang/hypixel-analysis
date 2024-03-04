@@ -75,6 +75,33 @@ fetch('data.csv')
                     }
                 },
                 plugins: {
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                mode: 'vertical', // Specify the mode explicitly if using an older version of the plugin
+                                scaleID: 'x-axis-0', // Ensure this matches your chart's x-axis ID if using an older version
+                                value: 1683,
+                                borderColor: 'rgb(255, 99, 132)',
+                                borderWidth: 2,
+                            },
+                            line2: {
+                                type: 'line',
+                                mode: 'vertical',
+                                scaleID: 'x-axis-0',
+                                value: 1866,
+                                borderColor: 'rgb(255, 99, 132)',
+                                borderWidth: 2,
+                            },
+                            box1: {
+                                type: 'box',
+                                xMin: 1683,
+                                xMax: 1866,
+                                backgroundColor: 'rgba(0, 255, 0, 0.2)',
+                                borderWidth: 0,
+                            }
+                        }
+                    },
                     legend: {
                         labels: {
                             color: '#a020f0', // A vivid purple for legend labels
