@@ -1,24 +1,13 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelector('.action-btn').addEventListener('click', function() {
-        document.getElementById('abstract-section').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 fetch('data.csv')
     .then(response => response.text())
     .then(csvString => {
         // Convert CSV string to arrays
         const rows = csvString.trim().split('\n').map(row => row.split(','));
-        // Assuming first row is header and first column contains timestamps
-        const labels = rows.slice(1).map(row => {
-            // Convert each timestamp to a readable date format
-            const timestamp = parseInt(row[0], 10); // Convert string to integer
-            const date = new Date(timestamp); // Convert integer to Date
-            return date.toLocaleDateString("en-US"); // Format date as needed ("en-US" is just an example)
-        });
         const data = rows.slice(1).map(row => parseFloat(row[1])); // Convert string to float for chart data
+
+        // Generate labels from 0 to 3133 instead of using dates
+        const labels = Array.from({ length: data.length }, (_, index) => index);
+
 
         // Calculate trend line values based on the equation provided
         const trendLineData = data.map((value, index) => {
