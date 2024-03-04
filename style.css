@@ -13,21 +13,15 @@ body, html {
     background-position: center;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Use 100% of the viewport height */
-    align-items: center;
-    justify-content: space-around; /* Distribute space around items */
-    text-align: center;
-    padding: 20px; /* Add some padding */
-}
-
 .main-header {
+    position: absolute; /* Added absolute positioning */
+    top: 0; /* Align to the top of the page */
+    left: 0; /* Align to the left of the page */
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10; /* Ensure the header is above other content */
 }
 
 .logo {
@@ -104,23 +98,22 @@ canvas {
     text-align: center; /* Center the text */
     border-radius: 10px; /* Rounded corners */
     box-shadow:
-        0 0 10px #a020f0, /* Innermost glow */
-        0 0 20px #a020f0, /* Small inner glow */
-        0 0 30px #a020f0, /* Medium glow */
-        0 0 40px #da70d6, /* Large glow */
-        0 0 50px #da70d6, /* Larger light purple glow */
-        0 0 60px #da70d6, /* Even larger glow with more spread */
-        0 0 70px #da70d6; /* Ultimate outermost glow */
+        0 0 4px #a020f0, /* Innermost subtle glow */
+        0 0 6px #da70d6; /* Outer subtle glow */
     transition: all 0.3s ease-in-out;
 }
 
 .neon-box:hover {
     box-shadow:
-        0 0 15px #a020f0, /* Innermost glow */
-        0 0 25px #a020f0, /* Small inner glow */
-        0 0 35px #a020f0, /* Medium glow */
-        0 0 45px #da70d6, /* Large glow */
-        0 0 55px #da70d6, /* Larger light purple glow */
-        0 0 65px #da70d6, /* Even larger glow with more spread */
-        0 0 75px #da70d6; /* Ultimate outermost glow */
+        0 0 6px #a020f0, /* Innermost subtle glow when hovered */
+        0 0 8px #da70d6; /* Outer subtle glow when hovered */
+}
+
+.main-footer {
+    text-align: center; /* Center the text inside the footer */
+    width: 100%; /* Footer should take the full width */
+    bottom: 0; /* Align to the bottom of the page */
+    left: 0; /* Align to the left of the page */
+    padding: 10px 0; /* Add some padding */
+    background: #000; /* Background color for visibility */
 }
