@@ -12,6 +12,13 @@ fetch('data.csv')
         });
         const data = rows.slice(1).map(row => parseFloat(row[1])); // Convert string to float for chart data
 
+        // Calculate trend line values based on the equation provided
+        const trendLineData = data.map((value, index) => {
+            const x = index; // Assuming x starts from 0 and increments by 1
+            // Calculate value based on the given equation
+            return 20866 + 94.9*x + -0.122*x**2 + -1.01E-04*x**3 + 2.22E-07*x**4 + -1.03E-10*x**5 + 1.46E-14*x**6;
+        });
+
         console.log(labels, data); // Debugging: log to see if data is parsed correctly
 
         // Render the chart
@@ -25,12 +32,21 @@ fetch('data.csv')
                     data: data,
                     backgroundColor: 'rgba(0, 255, 0, 0.2)',
                     borderColor: '#a020f0',
-                    borderWidth:2,
+                    borderWidth: 2,
                     pointBackgroundColor: '#a020f0',
                     pointBorderColor: '#ffffff',
                     pointRadius: 0,
                     pointHoverRadius: 5,
                     tension: 0.1
+                },
+                {
+                    label: 'Trend Line',
+                    data: trendLineData,
+                    borderColor: 'rgba(255, 0, 0, 1)', // Bright red for the trend line
+                    borderWidth: 2,
+                    fill: false, // Don't fill under the line
+                    pointRadius: 0, // No points visible on the trend line
+                    tension: 0.1 // Slight curve to the line
                 }]
             },
             options: {
