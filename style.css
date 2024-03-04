@@ -95,5 +95,32 @@ canvas {
 }
 
 .neon-box {
-    
+    border: 2px solid #a020f0; /* Bright purple border */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px auto; /* Margin around the box, centered horizontally */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+    font-size: 1.2rem; /* Font size for the text inside */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow:
+        0 0 10px #a020f0, /* Innermost glow */
+        0 0 20px #a020f0, /* Small inner glow */
+        0 0 30px #a020f0, /* Medium glow */
+        0 0 40px #da70d6, /* Large glow */
+        0 0 50px #da70d6, /* Larger light purple glow */
+        0 0 60px #da70d6, /* Even larger glow with more spread */
+        0 0 70px #da70d6; /* Ultimate outermost glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.neon-box:hover {
+    box-shadow:
+        0 0 15px #a020f0, /* Innermost glow */
+        0 0 25px #a020f0, /* Small inner glow */
+        0 0 35px #a020f0, /* Medium glow */
+        0 0 45px #da70d6, /* Large glow */
+        0 0 55px #da70d6, /* Larger light purple glow */
+        0 0 65px #da70d6, /* Even larger glow with more spread */
+        0 0 75px #da70d6; /* Ultimate outermost glow */
 }
