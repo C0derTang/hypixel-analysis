@@ -49,6 +49,15 @@ fetch('data.csv')
             options: {
                 scales: {
                     x: {
+                        title: {
+                            display: true,
+                            text: 'Days after 7/23/2015',
+                            color: '#a020f0',
+                            font: {
+                                size: 16,
+                                weight: 'bold',
+                            }
+                        },
                         grid: {
                             color: '#6a0dad', // A brighter purple for grid lines
                         },
