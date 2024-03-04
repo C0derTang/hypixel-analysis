@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('.action-btn').addEventListener('click', function() {
+        document.getElementById('abstract-section').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 fetch('data.csv')
     .then(response => response.text())
     .then(csvString => {
