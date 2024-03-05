@@ -1,9 +1,8 @@
 fetch('data.csv')
     .then(response => response.text())
     .then(csvString => {
-        // Convert CSV string to arrays
         const rows = csvString.trim().split('\n').map(row => row.split(','));
-        const data = rows.slice(1).map(row => parseFloat(row[1])); // Convert string to float for chart data
+        const data = rows.slice(1).map(row => parseFloat(row[1])); 
 
         // Generate labels from 0 to 3133 instead of using dates
         const labels = Array.from({ length: data.length }, (_, index) => index);
@@ -11,8 +10,7 @@ fetch('data.csv')
 
         // Calculate trend line values based on the equation provided
         const trendLineData = data.map((value, index) => {
-            const x = index; // Assuming x starts from 0 and increments by 1
-            // Calculate value based on the given equation
+            const x = index;
             return 20866 + 94.9*x + -0.122*x**2 + -1.01E-04*x**3 + 2.22E-07*x**4 + -1.03E-10*x**5 + 1.46E-14*x**6;
         });
 
@@ -21,7 +19,7 @@ fetch('data.csv')
         // Render the chart
         const ctx = document.getElementById('myChart').getContext('2d');
         new Chart(ctx, {
-            type: 'line', // Change to 'bar', 'pie', etc. as needed
+            type: 'line',
             data: {
                 labels: labels,
                 datasets: [{
@@ -39,11 +37,11 @@ fetch('data.csv')
                 {
                     label: 'Trend Line',
                     data: trendLineData,
-                    borderColor: 'rgba(255, 0, 0, 1)', // Bright red for the trend line
+                    borderColor: 'rgba(255, 0, 0, 1)',
                     borderWidth: 2,
-                    fill: false, // Don't fill under the line
-                    pointRadius: 0, // No points visible on the trend line
-                    tension: 0.1 // Slight curve to the line
+                    fill: false, 
+                    pointRadius: 0, 
+                    tension: 0.1 
                 }]
             },
             options: {
@@ -59,67 +57,49 @@ fetch('data.csv')
                             }
                         },
                         grid: {
-                            color: '#6a0dad', // A brighter purple for grid lines
+                            color: '#6a0dad',
                         },
                         ticks: {
-                            color: '#a020f0', // A vivid purple for tick labels
+                            color: '#a020f0',
                         }
                     },
                     y: {
                         grid: {
-                            color: '#6a0dad', // A brighter purple for grid lines
+                            color: '#6a0dad', 
                         },
                         ticks: {
-                            color: '#a020f0', // A vivid purple for tick labels
+                            color: '#a020f0',
                         }
                     }
                 },
                 plugins: {
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true,
+                            },
+                            pinch: {
+                                enabled: true,
+                            },
+                            mode: 'x'
+                        },
+                        pan: {
+                            enabled: true,
+                            mode: 'x' 
+                        }
+                    },
                     annotation: {
                         annotations: {
-                            line1: {
-                                type: 'line',
-                                mode: 'vertical', // Specify the mode explicitly if using an older version of the plugin
-                                scaleID: 'x-axis-0', // Ensure this matches your chart's x-axis ID if using an older version
-                                value: 1683,
-                                borderColor: 'rgb(255, 99, 132)',
-                                borderWidth: 2,
-                            },
-                            line2: {
-                                type: 'line',
-                                mode: 'vertical',
-                                scaleID: 'x-axis-0',
-                                value: 1866,
-                                borderColor: 'rgb(255, 99, 132)',
-                                borderWidth: 2,
-                            },
                             box1: {
                                 type: 'box',
                                 xMin: 1683,
                                 xMax: 1866,
-                                backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                                borderWidth: 0,
+                                yMin: 0,
+                                yMax: 300000,
+                                backgroundColor: 'rgba(0, 255, 0, 0.25)', 
+                                borderColor: 'rgb(0, 255, 0)', // Solid neon green border
+                                borderWidth: 1,
                             }
-                        }
-                    },
-                    legend: {
-                        labels: {
-                            color: '#a020f0', // A vivid purple for legend labels
-                        }
-                    },
-                    zoom: {
-                        zoom: {
-                            wheel: {
-                                enabled: true, // Enable zooming with the mouse wheel
-                            },
-                            pinch: {
-                                enabled: true, // Enable zooming with pinch gestures on touch devices
-                            },
-                            mode: 'x' // Enable zooming on the x-axis
-                        },
-                        pan: {
-                            enabled: true, // Enable panning
-                            mode: 'x' // Enable panning on the x-axis
                         }
                     }
                 },
