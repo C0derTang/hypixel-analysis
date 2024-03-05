@@ -51,13 +51,13 @@ body, html {
 
 .title {
     font-size: 4rem; /* Larger font size for the title */
-    color: #a020f0; /* Brighter purple color */
+    color: #20f099; /* Brighter purple color */
     margin: 20px 0; /* Add some vertical spacing */
 }
 
 .description {
     font-size: 1.5rem; /* Larger font size for the description */
-    color: #da70d6; /* Lighter purple color */
+    color: #70da89; /* Lighter purple color */
     margin: 20px 0; /* Add some vertical spacing */
 }
 

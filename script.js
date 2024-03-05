@@ -37,7 +37,7 @@ fetch('data.csv')
                 {
                     label: 'Trend Line',
                     data: trendLineData,
-                    borderColor: 'rgba(255, 0, 0, 1)',
+                    borderColor: 'rgba(0, 255, 0, 1)',
                     borderWidth: 2,
                     fill: false, 
                     pointRadius: 0, 
