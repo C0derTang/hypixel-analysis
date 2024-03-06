@@ -49,7 +49,7 @@ fetch('data.csv')
                     x: {
                         title: {
                             display: true,
-                            text: 'Days after 7/23/2015',
+                            text: 'Days after 7/23/2015 (First Data Collection)',
                             color: '#a020f0',
                             font: {
                                 size: 16,
@@ -92,8 +92,8 @@ fetch('data.csv')
                         annotations: {
                             box1: {
                                 type: 'box',
-                                xMin: 1683,
-                                xMax: 1866,
+                                xMin: 1652,
+                                xMax: 2843,
                                 yMin: 0,
                                 yMax: 300000,
                                 backgroundColor: 'rgba(0, 255, 0, 0.25)', 
