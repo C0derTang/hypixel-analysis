@@ -89,6 +89,7 @@ canvas {
 }
 
 .neon-box {
+    width: 80%;
     border: 2px solid #a020f0; /* Bright purple border */
     padding: 20px; /* Padding inside the box */
     margin: 20px auto; /* Margin around the box, centered horizontally */
@@ -116,4 +117,9 @@ canvas {
     left: 0; /* Align to the left of the page */
     padding: 10px 0; /* Add some padding */
     background: #000; /* Background color for visibility */
+}
+
+.resize{
+    width: 80%;
+    height: auto;
 }
