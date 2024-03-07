@@ -99,6 +99,16 @@ fetch('data.csv')
                                 backgroundColor: 'rgba(0, 255, 0, 0.25)', 
                                 borderColor: 'rgb(0, 255, 0)', // Solid neon green border
                                 borderWidth: 1,
+                            },
+                            box2: {
+                                type: 'box',
+                                xMin: 1683,
+                                xMax: 1866,
+                                yMin: 0,
+                                yMax: 300000,
+                                backgroundColor: 'rgba(255, 0, 0, 0.25)', 
+                                borderColor: 'rgb(255, 0, 0)', // Solid neon green border
+                                borderWidth: 1,
                             }
                         }
                     }
