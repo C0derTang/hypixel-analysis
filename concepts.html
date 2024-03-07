@@ -29,11 +29,14 @@
                     <h3 class="description">Time Frames for When Player Count Was Increasing/Decreasing</h3>
                     <p>by Ishmeet Singh</p>
                     <p>
+                        A New York tech article reported that peak video game usage occurred during the COVID-19 pandemic.
                         We first want to determine whether the population was increasing or decreasing over the COVID-19 lockdown period. 
                         To evaluate when the population of hypixel players was increasing and decreasing, 
                         we must take the derivative (f’(x)) of the function (f(x)) shown below.
                     </p>
+                    <h4 class="description">Calculations</h4>
                     <img src="ishwork1.png" class="resize">
+                    <h4 class="description">Analysis</h4>
                     <p>After graphing the derivative function (f’(x)) on Desmos, we look to the x-intercepts to find these critical values. 
                         If the derivative function is positive between 2 “immediate” critical values, 
                         there is an increasing interval bounded by those 2 critical values (non inclusive). 
@@ -46,37 +49,61 @@
                         This interval falls within the larger monotonically increasing interval (938.738, 2234.426), 
                         so it’s clear that the Hypixel player count was strictly/continuously increasing for the entirety of the COVID-19 lockdown period.
                     </p>
-
                     <img src="ishwork2.png">
                     
                 </div>
                 <div class="neon-box">
-                    <p>Concept 2</p>
+                    <h3 class="description">Comparison of COVID-19 Lockdown Dates and Dates of Maximum Player Count Increase</h3>
+                    <p>by Ryan Gurevich</p>
+                    <p>
+                        Since 2015, the Hypixel server has seen many areas of growth and decline. 
+                        One notable area of growth is 2020-2021, around the time of the COVID-19 crisis. 
+                        The World Health Organization stated in 2023 that the pandemic–which had been an emergency since January 30, 
+                        2020–was no longer an emergency on May 5, 2023 (JAMA Network, May 2023). 
+                        To see if the increase in player count of the server in this period was correlated to the official lockdown from March to August 2020 (NIH, Jan 2022)
+                        the second derivative can be used to find the date of the maximum rate of change during this period which can then be compared to the dates of the lockdown:
+
+                    </p>
+                    <h4 class="description">Calculations</h4>
+                    <p>6th-degree polynomial function approximating our data:</p>
+                    <img src="rgw1.png" >
+                    <p>Taking the derivative of the function:</p>
+                    <img src="rgw2.png" >
+                    <p>Taking the second derivative of the function:</p>
+                    <img src="rgw3.png" >
+                    <p>Using the second derivative and graphically solve for the x-intercepts in order to find maximum and minimum values for the rate of change of the function graphically:</p>
+                    <img src="rgw4.png" class="resize">
+                    <p>The x-intercepts on the interval of (0,3000) are at x = 650, 1647, 2611 (rounding to the nearest day). January 24, 2020 correlates to 1647 days (after July 23, 2015) on our graph.</p>
+                    <h4 class="description">Analysis</h4>
+                    <p>The maximum rate of server growth during the COVID-19 period was thus on January 24th, 
+                        2020 which is 6 days before the declaration of emergency by the World Health Organization and was less than 2 months prior to the official lockdown. 
+                        The fact that the maximum rate of increase in player count precedes the lockdown and pandemic emergency displays that the growth of the server in this period was naturally occurring before COVID-19’s influence but does not disprove the claim of the New York Tech November 2023 article that the maximum rate of growth of video game player numbers coincided with the COVID-19 pandemic.</p>
                 </div>
                 <div class="neon-box">
-                    <h3 class="description">Average Value</h3>
+                    <h3 class="description">Using Average Value to Compare Pre-, During, and Post-Lockdown Player Count</h3>
                     <p>by Christopher Tang</p>
                     <p>Hypixel Network, one of the largest Minecraft server networks globally, experienced significant changes in user activity due to the COVID-19 pandemic. By analyzing the average daily player counts during pre-pandemic, pandemic, and post-pandemic periods as declared by the World Health Organization, we can begin to understand these fluctuations and insights into player behavior in response to global events.</p>
                     <p>The average on an interval can be found by taking the definite integral of the trend line over one of the designated time periods.</p>
-                    <ul>Intervals according to WHO
+                    <ul>Intervals according to the JAMA article citing the WHO
                         <li> Pre-Pandemic: Jul 23 2015 - Jan 30 2020</li>
                         <li> Pandemic: Jan 30 2020 - May 5, 2023</li>
                         <li>Post-Pandemic: May 5, 2023 - Feb 19 2024</li>
                     </ul>
-                    <h4 class="description">Pre-Pandemic</h4>
+                    <h4 class="description">Calculations</h4>
+                    <h4>Pre-Pandemic</h4>
                     <img src="prelockdown.png">
                     <p>Before the public health emergency was declared, Hypixel averaged around 36297 players a day.</p>
 
-                    <h4 class="description">Pandemic</h4>
+                    <h4>Pandemic</h4>
                     <img src="lockdown.png"> 
                     <p>During the public health emergency (highlighted by the green section in the graph), the average players per day (calculated by the same integral with different bounds) rose to 93868 players</p>
 
-                    <h4 class="description">Post-Pandemic</h4>
+                    <h4>Post-Pandemic</h4>
                     <img src="postlockdown.png"> 
                     <p>After the crisis, the average daily player dropped to around 80859 players</p>
                     
                     <h3 class="description">Analysis</h3>
-                    <p> The significant rise in player activity correlate with and may be caused by the worldwide actions
+                    <p> The significant rise in player activity correlates with and may be caused by the worldwide actions
                         being taken at that time by countries in an attempt to decrease human-human contact to reduce the spread of the disease.
                         For many countries, this included the closing of many businesses and public places, leading to an increase in the time many individuals
                         spent at home. Boredom may have driven many to online entertainment such as video games like Minecraft. After this period ended,
