@@ -22,6 +22,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     z-index: 10; /* Ensure the header is above other content */
+    padding-bottom: 30px;
 }
 
 .logo {
@@ -42,6 +43,7 @@ body, html {
 }
 
 .content {
+    padding-top: 30px;
     flex-grow: 1; /* Allow content to take up available space */
     display: flex;
     flex-direction: column;
