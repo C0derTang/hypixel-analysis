@@ -12,7 +12,9 @@ body, html {
     background-repeat: no-repeat;
     background-position: center;
 }
-
+p{
+    line-height:2;
+}
 .main-header {
     position: absolute; /* Added absolute positioning */
     top: 0; /* Align to the top of the page */
